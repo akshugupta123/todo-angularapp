@@ -1,0 +1,15 @@
+<!-- todo-list.component.html -->
+<div>
+    <h1>Todo List</h1>
+    <input type="text" placeholder="Add new todo" [(ngModel)]="newTodo">
+    <button (click)="addTodo()">Add</button>
+    <ul>
+      <li *ngFor="let todo of todos">
+        <span [class.completed]="todo.completed">{{ todo.title }}</span>
+        <button (click)="markAsCompleted(todo.id)">Complete</button>
+        <button (click)="deleteTodo(todo.id)">Delete</button>
+      </li>
+    </ul>
+    <button (click)="clearCompleted()">Clear Completed</button>
+  </div>
+  

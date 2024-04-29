@@ -1,0 +1,6 @@
+<!-- todo-item.component.html -->
+<div class="todo-item">
+    <span [class.completed]="todo.completed">{{ todo.title }}</span>
+    <button [style.background-color]="todo.completed ? 'gray' : 'green'" [style.color]="'white'" (click)="markAsCompleted()">Complete</button>
+    <button [style.background-color]="'red'" [style.color]="'white'" (click)="deleteTodo()">Delete</button>
+</div>
